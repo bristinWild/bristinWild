@@ -17,8 +17,3 @@ Full Stack Web3 Developer · Guwahati, India
   <img src="header.svg" alt="Bristin Borah — Full-Stack Web3 Engineer" width="820"/>
 </div>
 
-<div align="center">
-
-![snake animation](https://raw.githubusercontent.com/bristinWild/bristinWild/output/github-snake-dark.svg)
-
-</div>

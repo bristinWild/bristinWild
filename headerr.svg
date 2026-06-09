@@ -1,0 +1,104 @@
+<svg viewBox="0 0 820 220" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, 'SF Mono', 'Fira Code', Menlo, monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0B14"/>
+      <stop offset="1" stop-color="#150F26"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2DD4BF"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes stream {
+        0%   { transform: translateX(0px);   opacity: 0; }
+        14%  { opacity: 1; }
+        80%  { opacity: 1; }
+        94%  { transform: translateX(250px); opacity: 0; }
+        100% { transform: translateX(250px); opacity: 0; }
+      }
+      @keyframes core {
+        0%,100% { r: 7;  opacity: .55; }
+        50%     { r: 13; opacity: 1; }
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes dash { to { stroke-dashoffset: -48; } }
+      @keyframes sendUp {
+        0%,30%  { transform: translate(0px,0px);     opacity: 0; }
+        36%     { transform: translate(0px,0px);     opacity: 1; }
+        74%     { transform: translate(216px,-28px); opacity: 1; }
+        82%     { transform: translate(216px,-28px); opacity: 0; }
+        100%    { transform: translate(216px,-28px); opacity: 0; }
+      }
+      @keyframes sendDn {
+        0%,40%  { transform: translate(0px,0px);     opacity: 0; }
+        46%     { transform: translate(0px,0px);     opacity: 1; }
+        84%     { transform: translate(216px,28px);  opacity: 1; }
+        92%     { transform: translate(216px,28px);  opacity: 0; }
+        100%    { transform: translate(216px,28px);  opacity: 0; }
+      }
+      @keyframes vUp { 0%,70%{opacity:0} 80%{opacity:1} 97%{opacity:1} 100%{opacity:0} }
+      @keyframes vDn { 0%,80%{opacity:0} 90%{opacity:1} 98%{opacity:1} 100%{opacity:0} }
+      @keyframes label { 0%,28%{opacity:0} 6%,22%{opacity:1} }
+      .pkt  { animation: stream 3s linear infinite; }
+      .core { animation: core 2s ease-in-out infinite; }
+      .orb  { transform-origin: 360px 126px; animation: spin 9s linear infinite; }
+      .flow { stroke-dasharray: 5 7; animation: dash 1.2s linear infinite; }
+      .tu   { animation: sendUp 8s ease-in-out infinite; }
+      .td   { animation: sendDn 8s ease-in-out infinite; }
+      .vu   { animation: vUp 8s ease-in-out infinite; }
+      .vd   { animation: vDn 8s ease-in-out infinite; }
+      .cyc  { animation: label 9s linear infinite; }
+    </style>
+  </defs>
+
+  <rect x="3" y="3" width="814" height="214" rx="18" fill="url(#bg)" stroke="#8B5CF6" stroke-opacity="0.28"/>
+
+  <!-- Title -->
+  <text x="410" y="42" text-anchor="middle" font-size="25" font-weight="700" letter-spacing="1" fill="#F5F3FF">Bristin Borah</text>
+  <text x="410" y="65" text-anchor="middle" font-size="12" letter-spacing="3" fill="#A78BFA">FULL-STACK WEB3 ENGINEER</text>
+
+  <text x="70" y="100" text-anchor="middle" font-size="9.5" fill="#6B7280">code</text>
+
+  <!-- Streaming code packets -->
+  <g>
+    <rect class="pkt" x="40" y="116" width="18" height="11" rx="3" fill="#2DD4BF" style="animation-delay:0s"/>
+    <rect class="pkt" x="40" y="130" width="18" height="11" rx="3" fill="#2DD4BF" style="animation-delay:.6s"/>
+    <rect class="pkt" x="40" y="123" width="18" height="11" rx="3" fill="#2DD4BF" style="animation-delay:1.2s"/>
+    <rect class="pkt" x="40" y="137" width="18" height="11" rx="3" fill="#2DD4BF" style="animation-delay:1.8s"/>
+  </g>
+
+  <!-- Core: the build hub -->
+  <g class="orb">
+    <circle cx="360" cy="92"  r="2.6" fill="#8B5CF6"/>
+    <circle cx="360" cy="160" r="2.6" fill="#2DD4BF"/>
+  </g>
+  <polygon points="392,126 376,154 344,154 328,126 344,98 376,98" fill="#8B5CF6" fill-opacity="0.07" stroke="#8B5CF6" stroke-width="2"/>
+  <circle class="core" cx="360" cy="126" r="7" fill="#8B5CF6" filter="url(#glow)"/>
+  <text x="360" y="131" text-anchor="middle" font-size="13" font-weight="700" fill="#EDE9FE">&lt;/&gt;</text>
+  <text x="360" y="182" text-anchor="middle" font-size="11" font-weight="600" fill="#C4B5FD">architect · build · ship</text>
+
+  <!-- Channels to both ecosystems -->
+  <line class="flow" x1="396" y1="120" x2="616" y2="98"  stroke="#8B5CF6" stroke-opacity="0.5" stroke-width="2"/>
+  <line class="flow" x1="396" y1="132" x2="616" y2="154" stroke="#2DD4BF" stroke-opacity="0.5" stroke-width="2"/>
+
+  <!-- Travelling build tokens -->
+  <g class="tu"><circle cx="400" cy="120" r="6" fill="#8B5CF6" filter="url(#glow)"/></g>
+  <g class="td"><circle cx="400" cy="132" r="6" fill="#2DD4BF" filter="url(#glow)"/></g>
+
+  <!-- EVM node (top right) -->
+  <circle cx="640" cy="98" r="22" fill="#0E1422" stroke="url(#node)" stroke-width="2.4"/>
+  <path class="vu" d="M631 98 l6 6 l11 -13" fill="none" stroke="#8B5CF6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="678" y="102" font-size="11" font-weight="600" fill="#C4B5FD">EVM</text>
+
+  <!-- Solana node (bottom right) -->
+  <circle cx="640" cy="154" r="22" fill="#0E1422" stroke="url(#node)" stroke-width="2.4"/>
+  <path class="vd" d="M631 154 l6 6 l11 -13" fill="none" stroke="#2DD4BF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="678" y="158" font-size="11" font-weight="600" fill="#99F6E4">Solana</text>
+
+  <!-- Breadth -->
+  <text x="410" y="204" text-anchor="middle" font-size="10.5" letter-spacing="0.5" fill="#8B7BD8">Rust · Solidity · DeFi · NFTs · GameFi · SDKs · zkVM</text>
+</svg>

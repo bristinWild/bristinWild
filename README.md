@@ -13,6 +13,9 @@ Full Stack Web3 Developer · Guwahati, India · 4+ years across EVM & Solana
 
 </div>
 
+<div align="center">
+  <img src="headerr.svg" alt="Bristin Borah — Full-Stack Web3 Engineer" width="820"/>
+</div>
 ---
 
 ## What I Build

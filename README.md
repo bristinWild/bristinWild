@@ -14,6 +14,6 @@ Full Stack Web3 Developer · Guwahati, India
 </div>
 
 <div align="center">
-  <img src="hello.gif" alt="Bristin Borah — Full-Stack Web3 Engineer" width="120"/>
+  <img src="cyberpunk77.gif" alt="Bristin Borah — Full-Stack Web3 Engineer" width="420"/>
 </div>
 
